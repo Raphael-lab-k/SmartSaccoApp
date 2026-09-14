@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.transactions.WithdrawFragment">
+
+    <TextView
+        android:id="@+id/text_withdraw_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_digital_withdrawal"
+        android:textColor="@color/text_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_payment_method_withdraw"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/label_payment_method"
+        app:layout_constraintTop_toBottomOf="@id/text_withdraw_title">
+
+        <AutoCompleteTextView
+            android:id="@+id/dropdown_payment_method_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:contentDescription="@string/label_payment_method" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_amount_withdraw"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_enter_amount"
+        app:layout_constraintTop_toBottomOf="@id/layout_payment_method_withdraw"
+        app:prefixText="UGX ">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_amount_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:contentDescription="@string/hint_enter_amount" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/btn_withdraw_funds"
+        android:contentDescription="@string/acc_btn_confirm"
+        app:layout_constraintTop_toBottomOf="@id/layout_amount_withdraw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

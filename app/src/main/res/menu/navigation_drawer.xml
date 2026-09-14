@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/nav_savings"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/menu_savings" />
+        <item
+            android:id="@+id/nav_group_savings"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="@string/menu_group_pots" />
+        <item
+            android:id="@+id/nav_marketplace"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Sacco Market" />
+        <item
+            android:id="@+id/nav_member_lookup"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Member Directory" />
+        <item
+            android:id="@+id/nav_loans"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/menu_loans" />
+        <item
+            android:id="@+id/nav_guarantors"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="@string/menu_guarantors" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="@string/menu_settings" />
+    </group>
+
+    <item android:title="Administration">
+        <menu>
+            <item
+                android:id="@+id/nav_admin_dashboard"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="@string/menu_admin_dashboard" />
+            <item
+                android:id="@+id/nav_member_mgmt"
+                android:icon="@android:drawable/ic_menu_myplaces"
+                android:title="@string/menu_member_mgmt" />
+            <item
+                android:id="@+id/nav_loan_mgmt"
+                android:icon="@android:drawable/ic_menu_view"
+                android:title="@string/menu_loan_mgmt" />
+            <item
+                android:id="@+id/nav_financial_reports"
+                android:icon="@android:drawable/ic_menu_sort_by_size"
+                android:title="@string/menu_financial_reports" />
+            <item
+                android:id="@+id/nav_audit_trail"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="@string/menu_audit_trail" />
+            <item
+                android:id="@+id/nav_branch_mgmt"
+                android:icon="@android:drawable/ic_menu_directions"
+                android:title="@string/menu_branch_mgmt" />
+        </menu>
+    </item>
+</menu>

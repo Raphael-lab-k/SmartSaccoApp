@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.smartsaccoapp.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_savings"
+        android:name="com.example.smartsaccoapp.ui.savings.SavingsFragment"
+        android:label="@string/menu_savings"
+        tools:layout="@layout/fragment_savings" />
+
+    <fragment
+        android:id="@+id/nav_loans"
+        android:name="com.example.smartsaccoapp.ui.loans.LoansFragment"
+        android:label="@string/menu_loans"
+        tools:layout="@layout/fragment_loans">
+        <action
+            android:id="@+id/action_nav_loans_to_loanApplicationFragment"
+            app:destination="@id/nav_loan_application" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_loan_application"
+        android:name="com.example.smartsaccoapp.ui.loans.LoanApplicationFragment"
+        android:label="@string/title_new_loan"
+        tools:layout="@layout/fragment_loan_application" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.smartsaccoapp.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_guarantors"
+        android:name="com.example.smartsaccoapp.ui.guarantors.GuarantorsFragment"
+        android:label="@string/menu_guarantors"
+        tools:layout="@layout/fragment_guarantors" />
+
+    <fragment
+        android:id="@+id/nav_deposit"
+        android:name="com.example.smartsaccoapp.ui.transactions.DepositFragment"
+        android:label="@string/title_digital_deposit"
+        tools:layout="@layout/fragment_deposit" />
+
+    <fragment
+        android:id="@+id/nav_withdraw"
+        android:name="com.example.smartsaccoapp.ui.transactions.WithdrawFragment"
+        android:label="@string/title_digital_withdrawal"
+        tools:layout="@layout/fragment_withdraw" />
+
+    <!-- Admin Fragments -->
+    <fragment
+        android:id="@+id/nav_admin_dashboard"
+        android:name="com.example.smartsaccoapp.ui.admin.AdminDashboardFragment"
+        android:label="@string/menu_admin_dashboard"
+        tools:layout="@layout/fragment_admin_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_member_mgmt"
+        android:name="com.example.smartsaccoapp.ui.admin.MemberManagementFragment"
+        android:label="@string/menu_member_mgmt"
+        tools:layout="@layout/fragment_member_management" />
+
+    <fragment
+        android:id="@+id/nav_loan_mgmt"
+        android:name="com.example.smartsaccoapp.ui.admin.LoanManagementFragment"
+        android:label="@string/menu_loan_mgmt"
+        tools:layout="@layout/fragment_loan_management" />
+
+    <fragment
+        android:id="@+id/nav_financial_reports"
+        android:name="com.example.smartsaccoapp.ui.admin.FinancialReportsFragment"
+        android:label="@string/menu_financial_reports"
+        tools:layout="@layout/fragment_financial_reports" />
+
+    <fragment
+        android:id="@+id/nav_audit_trail"
+        android:name="com.example.smartsaccoapp.ui.admin.AuditTrailFragment"
+        android:label="Audit Trail"
+        tools:layout="@layout/fragment_audit_trail" />
+
+    <fragment
+        android:id="@+id/nav_branch_mgmt"
+        android:name="com.example.smartsaccoapp.ui.admin.BranchManagementFragment"
+        android:label="Branch Management"
+        tools:layout="@layout/fragment_branch_management" />
+
+    <fragment
+        android:id="@+id/nav_kyc"
+        android:name="com.example.smartsaccoapp.ui.auth.KycFragment"
+        android:label="@string/title_complete_profile"
+        tools:layout="@layout/fragment_kyc" />
+
+    <fragment
+        android:id="@+id/nav_transfer"
+        android:name="com.example.smartsaccoapp.ui.transactions.TransferFragment"
+        android:label="@string/title_transfer_funds"
+        tools:layout="@layout/fragment_transfer" />
+
+    <fragment
+        android:id="@+id/nav_group_savings"
+        android:name="com.example.smartsaccoapp.ui.savings.GroupSavingsFragment"
+        android:label="@string/menu_group_pots"
+        tools:layout="@layout/fragment_group_savings" />
+
+    <fragment
+        android:id="@+id/nav_marketplace"
+        android:name="com.example.smartsaccoapp.ui.marketplace.MarketplaceFragment"
+        android:label="Sacco Market"
+        tools:layout="@layout/fragment_marketplace" />
+
+    <fragment
+        android:id="@+id/nav_member_lookup"
+        android:name="com.example.smartsaccoapp.ui.dashboard.MemberLookupFragment"
+        android:label="Member Directory"
+        tools:layout="@layout/fragment_member_lookup" />
+</navigation>
